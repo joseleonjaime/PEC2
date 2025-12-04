@@ -1,0 +1,149 @@
+
+
+.home-poster-grid {
+  // Declaramos contenedor para container queries
+  container-type: inline-size;
+  container-name: home-poster;
+
+  
+  display: flex;
+  flex-direction: column;
+  gap: rem(24);
+  align-items: stretch;
+  text-align: center;
+  background: radial-gradient(circle at top, $color-claro 0, $color-fondo 60%, $color-oscuro 120%);
+  border-radius: 1.5rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+
+  .home-poster__badge {
+    align-self: flex-start;
+    background-color: $color-primario;
+    color: $color-claro;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    font-size: rem(12);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .home-poster__title h1 {
+    font-family: $font-principal;
+    font-size: clamp(2rem, 4vw, 3.4rem);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .home-poster__title p {
+    max-width: 32rem;
+    margin-inline: auto;
+    font-size: rem(16);
+  }
+
+  .home-poster__info p {
+    margin: 0.25rem 0;
+    font-weight: 600;
+
+    i {
+      margin-right: 0.4rem;
+      color: $color-primario;
+    }
+  }
+
+  .home-poster__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+  }
+
+  .home-poster__highlights {
+    text-align: left;
+
+    h2 {
+      font-size: rem(18);
+      margin-bottom: 0.5rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin: 0;
+
+      li {
+        margin-bottom: 0.25rem;
+      }
+    }
+  }
+
+  .home-poster__image img {
+    display: block;
+    width: 100%;
+    max-width: 380px;
+    margin-inline: auto;
+    border-radius: 1.5rem;
+    object-fit: cover;
+  }
+}
+
+
+@supports (display: grid) {
+  .home-poster-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr;
+    grid-template-areas:
+      "badge   image"
+      "title   image"
+      "info    image"
+      "cta     image"
+      "high    image";
+    text-align: left;
+
+    .home-poster__badge {
+      grid-area: badge;
+    }
+
+    .home-poster__title {
+      grid-area: title;
+    }
+
+    .home-poster__info {
+      grid-area: info;
+    }
+
+    .home-poster__cta {
+      grid-area: cta;
+      justify-content: flex-start;
+    }
+
+    .home-poster__highlights {
+      grid-area: high;
+    }
+
+    .home-poster__image {
+      grid-area: image;
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        height: 100%;
+        max-height: 420px;
+      }
+    }
+  }
+}
+
+// Container query para ajustar la distribución cuando el contenedor es ancho
+@container home-poster (min-width: 52rem) {
+  .home-poster-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .home-poster__title h1 {
+    font-size: rem(40);
+  }
+}

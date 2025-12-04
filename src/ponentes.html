@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ponentes · Jornadas de Cocina Tradicional</title>
+
+    <!-- JS principal) -->
+    <script type="module" src="./assets/scripts/main.js"></script>
+
+    <!-- FontAwesome CDN para iconos -->
+    <script src="https://kit.fontawesome.com/a2e860f0d2.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <!-- HEADER  -->
+    <header class="main-nav bg-white shadow-sm py-3">
+      <div class="container d-flex justify-content-between align-items-center">
+        <h1 class="fs-4 m-0 text-uppercase fw-bold">
+          🍲 Jornadas de Cocina Tradicional
+        </h1>
+
+        <nav>
+          <a href="index.html" class="me-3">Inicio</a>
+          <a href="ponentes.html" class="me-3 fw-bold text-decoration-underline">Ponentes</a>
+          <a href="articulo.html" class="me-3">Artículo</a>
+          <a href="contacto.html">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main-container">
+      <section class="ponentes-intro">
+        <h2>Nuestros ponentes</h2>
+        <p>
+          Chefs y divulgadores especializados en cocina tradicional, producto local y técnicas de
+          toda la vida.
+        </p>
+      </section>
+
+      <section class="ponentes-grid" aria-label="Listado de ponentes">
+        <!-- Ponente 1 -->
+        <article class="ponente-card">
+          <div class="ponente-card__header">
+            <img
+              src="./assets/images/ponente1.jpg"
+              alt="Retrato de Ana Gómez, repostera tradicional"
+              class="ponente-card__image"
+            />
+          </div>
+          <div class="ponente-card__body">
+            <h3 class="ponente-card__name">Ana Gómez</h3>
+            <p class="ponente-card__role">Maestra pastelera · Repostería tradicional</p>
+            <p class="ponente-card__bio">
+              Especializada en rosquillas, magdalenas y dulces de fiesta mayor con más de 25 años
+              de experiencia en obrador.
+            </p>
+            <ul class="ponente-card__tags">
+              <li>Dulces de fiesta</li>
+              <li>Recetas de abuela</li>
+              <li>Horno de leña</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Ponente 2 -->
+        <article class="ponente-card">
+          <div class="ponente-card__header">
+            <img
+              src="./assets/images/ponente2.jpg"
+              alt="Retrato de Marcos Ruiz, cocinero de guisos"
+              class="ponente-card__image"
+            />
+          </div>
+          <div class="ponente-card__body">
+            <h3 class="ponente-card__name">Marcos Ruiz</h3>
+            <p class="ponente-card__role">Cocinero · Guisos y cocina de cuchara</p>
+            <p class="ponente-card__bio">
+              Famoso por sus guisos a fuego lento, potajes y estofados con producto de kilómetro 0.
+            </p>
+            <ul class="ponente-card__tags">
+              <li>Cocina de cuchara</li>
+              <li>Largo chup-chup</li>
+              <li>Producto local</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Ponente 3 -->
+        <article class="ponente-card">
+          <div class="ponente-card__header">
+            <img
+              src="./assets/images/ponente3.jpg"
+              alt="Retrato de Laura Serra, experta en conservas"
+              class="ponente-card__image"
+            />
+          </div>
+          <div class="ponente-card__body">
+            <h3 class="ponente-card__name">Laura Serra</h3>
+            <p class="ponente-card__role">Divulgadora · Conservas y despensa</p>
+            <p class="ponente-card__bio">
+              Imparte talleres de conservas caseras, mermeladas y técnicas de aprovechamiento para
+              evitar el desperdicio alimentario.
+            </p>
+            <ul class="ponente-card__tags">
+              <li>Conservas caseras</li>
+              <li>Aprovechamiento</li>
+              <li>Despensa sostenible</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Ponente 4 -->
+        <article class="ponente-card">
+          <div class="ponente-card__header">
+            <img
+              src="./assets/images/ponente4.jpg"
+              alt="Retrato de Jordi Pujol, experto en pan"
+              class="ponente-card__image"
+            />
+          </div>
+          <div class="ponente-card__body">
+            <h3 class="ponente-card__name">Jordi Pujol</h3>
+            <p class="ponente-card__role">Panadero artesano</p>
+            <p class="ponente-card__bio">
+              Recupera panes tradicionales con masa madre, harinas antiguas y hornos de piedra.
+            </p>
+            <ul class="ponente-card__tags">
+              <li>Masa madre</li>
+              <li>Pan de pueblo</li>
+              <li>Harinas antiguas</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      © Jornadas de Cocina Tradicional — UOC 2025
+    </footer>
+  </body>
+</html>

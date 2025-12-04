@@ -1,0 +1,20 @@
+.contacto-form {
+  background: #ffffffee;
+  border: 2px solid #e3cbaa;
+  backdrop-filter: blur(4px);
+
+  label {
+    color: #5a2d0c;
+    font-weight: 600;
+  }
+
+  button {
+    font-weight: 600;
+  }
+}
+
+@media (max-width: 768px) {
+  .contacto-form {
+    width: 100%;
+  }
+}

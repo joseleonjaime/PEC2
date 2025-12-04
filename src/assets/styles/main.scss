@@ -1,0 +1,51 @@
+@use "sass:color";
+
+// Declaramos capas de cascada que vamos a usar
+@layer reset, bootstrap, layout, pages;
+
+// 1. Variables y funciones propias
+@import "variables";
+@import "dependencies";
+
+// 2. Bootstrap en su propia capa
+@layer bootstrap {
+  @import "bootstrap/scss/bootstrap";
+}
+
+
+// 3. Estilos globales / layout
+@layer layout {
+
+  body {
+    font-family: $font-principal;
+    background-color: $color-fondo;
+    color: $color-oscuro;
+    margin: 0;
+  }
+
+  .main-nav {
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .main-container {
+    padding-inline: clamp(1rem, 3vw, 3rem);
+    padding-block: clamp(2rem, 4vh, 4rem);
+  }
+
+  .site-footer {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: rem(14);
+    background-color: $color-oscuro;
+    color: $color-claro;
+  }
+}
+
+// 4. Estilos específicos de cada página
+@layer pages {
+  @import "layouts/home";
+  @import "layouts/ponentes";
+  @import "layouts/articulo";
+  @import "layouts/contacto";
+}

@@ -1,0 +1,22 @@
+// _variables.scss
+
+// Paleta rústica
+$color-fondo: #f9f2e7;
+$color-primario: #8b2f1c;     // vino / barro
+$color-secundario: #c78a3d;   // mostaza / pan
+$color-oscuro: #402015;
+$color-claro: #fff8ef;
+
+// Tipografía base
+$font-principal: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+// Función de ayuda
+@function rem($px) {
+  @return ($px / 16) * 1rem;
+}
+
+// Personalización mínima Bootstrap
+$primary: $color-primario;
+$secondary: $color-secundario;
+$body-bg: $color-fondo;
+$body-color: $color-oscuro;

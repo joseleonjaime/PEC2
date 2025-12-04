@@ -1,0 +1,30 @@
+.ponentes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.ponente-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 260px;
+  text-align: center;
+  transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
+
+  img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: .8rem;
+  }
+
+  h3 {
+    color: #5a2d0c;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+  }
+}
